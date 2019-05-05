@@ -5,43 +5,14 @@
 int main(void)
 {
 	initializeMrLCD();
-
-	char positionString [4];
-	
+	GotoMrLCDsLocation(8,1);
+	_delay_ms(50);
+	Send_A_String("Test");
+	_delay_ms(50);
+	Send_A_Character(0x31);
+	_delay_ms(50);
 	while(1)
-	{		
-		for (int y = 1; y <= 2; y++)
-		{
-			for (int x = 1; x <= 16; x++)
-			{
-					
-				itoa(x, positionString, 10);
-				GotoMrLCDsLocation(8, 1);
-				Send_A_String("X = ");
-				Send_A_String(positionString);
-				
-				itoa(y, positionString, 10);
-				GotoMrLCDsLocation(8, 2);
-				Send_A_String("Y = ");
-				Send_A_String(positionString);
-				
-				GotoMrLCDsLocation(x, y);
-				Send_A_String("x");
-				
-				_delay_ms(500);
-				
-				GotoMrLCDsLocation(x, y);
-				Send_A_String(" ");
-				
-				itoa(x, positionString, 10);
-				GotoMrLCDsLocation(8, 1);
-				Send_A_String("      ");
-				
-				itoa(y, positionString, 10);
-				GotoMrLCDsLocation(8, 2);
-				Send_A_String("      ");
-			}
-		}
+	{
 	}
 	Send_A_Command(0x01);
 	_delay_ms(2);
