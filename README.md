@@ -3,7 +3,7 @@
 /*
 LCD1602 standard pin connections:
 
-1		    VSS		  /ground				          @	GND
+1       VSS     /ground                 @ GND
 
 2		    VDD		  /Power				          @	5V
 
