@@ -1,19 +1,20 @@
+#define F_CPU 1000000
 #include <avr/io.h>
 #include <util/delay.h>
-#include "MrLCD.h"
+#include "LCD1602.h"
 
 int main(void)
 {
-	initializeMrLCD();
-	GotoMrLCDsLocation(8,1);
+	LCD_init();
+	LCD_coord(8,1);
 	_delay_ms(50);
-	Send_A_String("Test");
+	LCD_string("Test");
 	_delay_ms(50);
-	Send_A_Character(0x31);
+	LCD_char(0x31);
 	_delay_ms(50);
 	while(1)
 	{
 	}
-	Send_A_Command(0x01);
+	LCD_command(0x01);
 	_delay_ms(2);
 }
