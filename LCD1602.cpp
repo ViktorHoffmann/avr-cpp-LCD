@@ -48,11 +48,12 @@ void LCD_string(char *StringOfCharacters)
 	}
 }
 
-char firstColumnPositionForMrLCD[2] = {0, 64};	//For use with a 16x04 LCD change to [...] "[4] = {0, 64, 20, 84};"
+char firstColumnPositionForLCD[2] = {0, 64};		//LCD 1602
+//char firstColumnPositionForLCD[4] = {0, 64, 20, 84};	//LCD 1604
 
 void LCD_coord(uint8_t x, uint8_t y)
 {
-	LCD_command(0x80 + firstColumnPositionForMrLCD[y-1] + (x-1));
+	LCD_command(0x80 + firstColumnPositionForLCD[y-1] + (x-1));
 }
 
 void LCD_init()
