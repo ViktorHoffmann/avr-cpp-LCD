@@ -1,5 +1,7 @@
 # avr-cpp-LCD // LCD1602 driver for V4 Prototype Board - ATMega32 LCD driver
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/830ab9c0c1c34111aaa730ce0307c6ad)](https://app.codacy.com/manual/ViktorMaximilian-H/avr-cpp-LCD?utm_source=github.com&utm_medium=referral&utm_content=ViktorMaximilian-H/avr-cpp-LCD&utm_campaign=Badge_Grade_Dashboard)
+
 /*
 LCD1602 standard pin connections:
 
